@@ -33,6 +33,7 @@ def update_cc_prices():
 						'price': latest_price,
 					}
 				)
+
 @app.task(name='celery.ping')
 def ping():
     # type: () -> str
