@@ -1,6 +1,6 @@
 <html>
 <head>
-    <h4>Welcome to CryptoCoin-Ticker</h4>>
+    <h4>Welcome to CryptoCoin-Ticker</h4>
     <title>Tickers</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -25,8 +25,8 @@
         <div class="input-group-prepend">
             <button type="button" value="{{ ticker_code }}" class="btn btn-info" data-subscribed="false" onclick="setInterval(1000)" disabled>{{ ticker_code }}</button>
         </div>
-        <i>Buy</i>><input id="{{ ticker_code }}B" class="form-control-lg" placeholder="Buy Value" type="text" readonly="readonly"/>
-        <i>Sell</i><input id="{{ ticker_code }}S" class="form-control-lg" placeholder="Sell Value" type="text" readonly="readonly"/>
+        <input id="{{ ticker_code }}B" class="form-control-lg" placeholder="Buy Value" type="text" readonly="readonly"/>
+        <input id="{{ ticker_code }}S" class="form-control-lg" placeholder="Sell Value" type="text" readonly="readonly"/>
     </div>
     {% endfor %}
 </div>
@@ -68,7 +68,7 @@
                     'transition': 'background-color 0.2s linear',
                 })
                 if ('price' in data) {
-                    $(`#${tc}B`).val(data['price']['buy'])
+                    $(`#${tc}B`).val(data['price']['buy']+'$')
                     $(`#${tc}S`).val(data['price']['sell'])
                 }
                 setTimeout(() => {
