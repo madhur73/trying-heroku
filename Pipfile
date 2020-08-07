@@ -1,0 +1,21 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django = "*"
+django-redis = "*"
+celery = "*"
+requests = "*"
+django-celery-beat = "*"
+channels = "*"
+channels-redis = "*"
+pytest = "*"
+daphne = "*"
+django-environ = "*"
+
+[requires]
+python_version = "3.6"
