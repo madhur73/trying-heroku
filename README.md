@@ -22,5 +22,5 @@ Components used:
 - Heroku
 
 <h2> System Design</h2>>
-[](images/websocket-archi.png?raw=true)
+[](https://github.com/madhur73/trying-heroku/blob/master/images/websocket-archi.png?raw=true)
 
