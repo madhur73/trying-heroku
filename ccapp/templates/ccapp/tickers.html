@@ -69,8 +69,8 @@
                     'transition': 'background-color 0.2s linear',
                 })
                 if ('price' in data) {
-                    $('$'`#${tc}B`).val(data['price']['buy'])
-                    $('$'+`#${tc}S`).val(data['price']['sell'])
+                    $(`#${tc}B`).val(data['price']['buy']+"$")
+                    $(`#${tc}S`).val(data['price']['sell']+"$")
                 }
                 setTimeout(() => {
                     button.css({
