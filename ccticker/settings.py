@@ -31,7 +31,7 @@ SECRET_KEY = '*#ot6ux2#v%zm$kc!z9nwxb&&hj0oxgxystd5+z#z1!*+$$b7-'
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['intense-shelf-05236.herokuapp.com']
 
 
 # Application definition
