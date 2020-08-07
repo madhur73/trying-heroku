@@ -1,5 +1,6 @@
 <html>
 <head>
+    <h4>Welcome to CryptoCoin-Ticker</h4>>
     <title>Tickers</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -24,14 +25,17 @@
         <div class="input-group-prepend">
             <button type="button" value="{{ ticker_code }}" class="btn btn-info" data-subscribed="false" onclick="setInterval(1000)" disabled>{{ ticker_code }}</button>
         </div>
-        <input id="{{ ticker_code }}B" class="form-control-lg" placeholder="Buy Value" type="text" readonly="readonly"/>
-        <input id="{{ ticker_code }}S" class="form-control-lg" placeholder="Sell Value" type="text" readonly="readonly"/>
+        <i>Buy</i>><input id="{{ ticker_code }}B" class="form-control-lg" placeholder="Buy Value" type="text" readonly="readonly"/>
+        <i>Sell</i><input id="{{ ticker_code }}S" class="form-control-lg" placeholder="Sell Value" type="text" readonly="readonly"/>
     </div>
     {% endfor %}
 </div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
 <div>
-    <p> We Rcommed you to buy from :  <input id="buyRecomm" class="form-control-lg" placeholder="Buy Value" type="text" readonly="readonly"/></p>
+    <p>Streaming Recommendation Work is in progress!!!!</p>
 </div>
+
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
