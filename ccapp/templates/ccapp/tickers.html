@@ -51,7 +51,10 @@
             if (button.attr('data-subscribed') === 'false') {
             button.attr('data-subscribed', 'true')
             button.toggleClass('btn-info btn-success')
-            sockets[tc] = new WebSocket(`ws://${window.location.host}/ws/${tc.substring(0, 3)}/${tc.substring(3, 6)}`)
+            var ws_scheme = window.location.protocol == "https:" ? "wss" : "ws";
+            //sockets[tc] = new ReconnectingWebSocket(ws_scheme + '://' + window.location.host + "/chat" + window.location.pathname);
+            //sockets[tc] = new ReconnectingWebSocket(ws_scheme + '://' + window.location.host +'/ws/'+${tc.substring(0, 3)}+'/'+${tc.substring(3, 6)}+ window.location.pathname);
+            sockets[tc] = new WebSocket(`${ws_scheme}://${window.location.host}/ws/${tc.substring(0, 3)}/${tc.substring(3, 6)}`)
             sockets[tc].onmessage = event => {
                 console.log(event)
                 const data = JSON.parse(event.data)
