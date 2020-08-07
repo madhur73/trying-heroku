@@ -22,7 +22,7 @@
     {% for ticker_code in ticker_codes %}
     <div class="ticker input-group">
         <div class="input-group-prepend">
-            <button type="button" value="{{ ticker_code }}" class="btn btn-info" data-subscribed="false" onclick="setInterval(1)" disabled>{{ ticker_code }}</button>
+            <button type="button" value="{{ ticker_code }}" class="btn btn-info" data-subscribed="false" onclick="setInterval(1000)" disabled>{{ ticker_code }}</button>
         </div>
         <input id="{{ ticker_code }}B" class="form-control-lg" placeholder="Buy Value" type="text" readonly="readonly"/>
         <input id="{{ ticker_code }}S" class="form-control-lg" placeholder="Sell Value" type="text" readonly="readonly"/>
@@ -52,8 +52,6 @@
             button.attr('data-subscribed', 'true')
             button.toggleClass('btn-info btn-success')
             var ws_scheme = window.location.protocol == "https:" ? "wss" : "ws";
-            //sockets[tc] = new ReconnectingWebSocket(ws_scheme + '://' + window.location.host + "/chat" + window.location.pathname);
-            //sockets[tc] = new ReconnectingWebSocket(ws_scheme + '://' + window.location.host +'/ws/'+${tc.substring(0, 3)}+'/'+${tc.substring(3, 6)}+ window.location.pathname);
             sockets[tc] = new WebSocket(`${ws_scheme}://${window.location.host}/ws/${tc.substring(0, 3)}/${tc.substring(3, 6)}`)
             sockets[tc].onmessage = event => {
                 console.log(event)
@@ -85,7 +83,7 @@
 
 </script>
 <script type="text/javascript">
-var randomTime = 10000 
+var randomTime = 1000
 setInterval(function() {  
 
   var tags = ["BTCBIN", "BTCKRA","ETHBIN","ETHKRA"]

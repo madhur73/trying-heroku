@@ -30,7 +30,7 @@
       }
     ],
     "addons": [
-        
+
         {
             "plan": "heroku-redis"
         }
